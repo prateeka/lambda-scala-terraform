@@ -2,3 +2,4 @@
 *.log
 .idea/
 target/
+lib_managed/
