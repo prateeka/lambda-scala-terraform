@@ -16,7 +16,7 @@ resource "aws_iam_role" "lambda_exec_role" {
 EOF
 
   tags = {
-    repo-link = " https://github.com/prateeka/lambda-scala-terraform.git"
+    repo-link = "https://github.com/prateeka/lambda-scala-terraform.git"
   }
 
 }
