@@ -15,9 +15,7 @@ resource "aws_iam_role" "lambda_exec_role" {
 }
 EOF
 
-  tags = {
-    repo-link = "https://github.com/prateeka/lambda-scala-terraform.git"
-  }
+  tags = local.common_tags
 
 }
 
@@ -25,7 +23,6 @@ resource "aws_iam_role_policy_attachment" "test-attach" {
   role = aws_iam_role.lambda_exec_role.name
   policy_arn = data.aws_iam_policy.ReadOnlyAccess.arn
 }
-
 
 data "aws_iam_policy" "ReadOnlyAccess" {
   arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
