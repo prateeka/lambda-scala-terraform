@@ -18,5 +18,3 @@
 * `https://dev.to/frosnerd/deploying-an-http-api-on-aws-using-lambda-and-api-gateway-g61`
 * [s3 plugin](https://github.com/sbt/sbt-s3)
 * [assembly plugin](https://github.com/sbt/sbt-assembly)
-
-
