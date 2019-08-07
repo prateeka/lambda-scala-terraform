@@ -19,10 +19,8 @@ assemblyMergeStrategy in assembly := {
 
 //s3 plugin config
 enablePlugins(S3Plugin)
-mappings in s3Upload := Seq((new java.io.File(s"target/scala-2.13/${(ThisBuild / name).value}.jar"), s"${
-  (ThisBuild /
-    name).value
-}.jar"))
-s3Host in s3Upload := "lambda-scala" //bucket name
+mappings in s3Upload := Seq((new java.io.File(s"target/scala-2.13/${(ThisBuild / name).value}.jar"),
+  s"${(ThisBuild / name).value}.jar"))
+s3Host in s3Upload := "lambda-scala-terraform-demo" //bucket name
 
 //logLevel in assembly := Level.Debug
