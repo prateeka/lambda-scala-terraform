@@ -8,8 +8,6 @@
 * push above generated uber jar to s3 bucket (name listed in build.sbt)
     * s3Upload
 
-
----
 ###### Useful links
 * `https://seanmcgary.com/posts/how-to-deploy-an-aws-lambda-with-terraform/`
 * `http://queirozf.com/entries/creating-scala-fat-jars-for-spark-on-sbt-with-sbt-assembly-plugin`
