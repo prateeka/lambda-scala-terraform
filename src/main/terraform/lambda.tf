@@ -8,4 +8,6 @@ resource "aws_lambda_function" "lambda_scala_terraformn_demo" {
   tags = local.common_tags
   timeout = 15
   memory_size = 512
+  depends_on = [
+    aws_s3_bucket_object.object]
 }
