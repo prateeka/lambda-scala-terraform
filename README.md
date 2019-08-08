@@ -3,10 +3,19 @@
 
 
 ###### Commands:
-* generate uber jar
-    * assembly
-* push above generated uber jar to s3 bucket (name listed in build.sbt)
-    * s3Upload
+* ###### Build
+    * generate uber jar
+        * `sbt assembly`
+    * _(not needed if using terraform to push jar to s3)_ push above generated uber jar to s3 bucket (name listed in build.sbt)        
+        * `sbt s3Upload`
+
+* ###### Deploy
+    * creates iam role, s3 bucket for zip upload, lambda function 
+        * `terraform apply --auto-approve`
+
+* ###### Test
+    * `aws lambda invoke --function-name lambda_scala_demo --payload '{"firstName": "value1","lastName": "value2"}' --log-type Tail  --query 'LogResult' --output text out |  base64 -D`
+
 
 ###### Useful links
 * `https://seanmcgary.com/posts/how-to-deploy-an-aws-lambda-with-terraform/`
